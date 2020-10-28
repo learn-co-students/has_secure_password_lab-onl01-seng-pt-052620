@@ -4,10 +4,10 @@
     <div class="notice"><%= flash[:notice] %></div>
 <% end %><br>
 
-<%= form_tag('/login') do %>
-    <%= label_tag :name, "Username" %>
-    <%= text_field_tag :name %>
-    <%= label_tag :password %>
-    <%= text_field_tag :password %>
-    <%= submit_tag "Login" %>
+<%= form_for @user, url: "/login", method: "post" do |f| %>
+    <%= f.label :name, "Username" %>
+    <%= f.text_field :name %>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+    <%= f.submit %>
 <% end %>
