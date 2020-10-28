@@ -9,11 +9,13 @@ class UsersController < ApplicationController
         if @user.save
             render :welcome
         else
+            flash[:notice] = "Name and password cannot be blank"
             redirect_to new_user_path
         end 
     end 
 
     def welcome
+        
     end
 
     private
