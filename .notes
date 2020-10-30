@@ -1,0 +1,3 @@
+rails generate model User name:string password_digest:string --skip-test-framework
+rails generate controller Users new create --skip-test-framework
+rails generate controller Sessions create --skip-test-framework
