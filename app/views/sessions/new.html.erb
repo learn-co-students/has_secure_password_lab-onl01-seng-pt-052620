@@ -1,0 +1,12 @@
+<h1>New User Signup</h1>
+<% binding.pry %>
+<% form_for @user, url: login_path, method: :post do |f| %>
+  <label>user Name:</label>
+  <%= f.text_field :name %><br>
+  <label>Password:</label>
+  <%= f.password_field :password %>
+  <label>Confirm Password:</label>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.submit "Sign Up" %>
+  <% end %>
